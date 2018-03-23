@@ -9,9 +9,9 @@ def turn(board)
     move(board, index)
     display_board(board)
   else 
-    until valid_move?(board, index) == true
+    #until valid_move?(board, index) == true
     turn(board)
-      break
+      #break
     end
   end
 end
