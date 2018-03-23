@@ -1,21 +1,20 @@
 #TURN
 def turn(board)
-  
-puts "Please enter 1-9:" 
+  puts "Please enter 1-9:" 
+  input = gets.strip
+  index = input_to_index(input)
 
-input = gets.strip
-input_to_index(input)
 
-#valid_move?(board, input_to_index)
-
-#if valid_move?(board, input_to_index(input) = index)
-  #move(array, index)
-#else
-  #until valid_move?(board, index) == true
-  #turn(board)
+  if valid_move?(board, index)
+    move(board, index)
+    display_board(board)
+  else 
+    until valid_move?(board, index) == true
+    turn(board)
+      break
     end
-  #end
-#end
+  end
+end
 
 
 #DISPLAY_BOARD
